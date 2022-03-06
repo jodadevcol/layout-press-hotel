@@ -1,0 +1,117 @@
+/* Hero */
+.hero {
+  padding-top: 10em;
+}
+.hero-bar {
+  height: 80px;
+  padding: 0 4.2em;
+}
+.bar-title {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.bar-logo > svg {
+  width: 190px;
+  height: 190px;
+}
+/* Histor making */
+.making-title {
+  font-size: 4.2rem;
+  line-height: 50px;
+  font-weight: 400;
+}
+.making-subtitle {
+  font-size: 3rem;
+  line-height: 38px;
+  font-weight: 400;
+}
+.making-paragraph {
+  max-width: 820px;
+  font-size: 1.48rem;
+  line-height: 24px;
+}
+/* Accommodations */
+.accommodations-box {
+  grid-template-columns: minmax(300px, 380px) 1fr;
+  gap: 0 4em;
+}
+.info-accomoda--title {
+  font-size: 2rem;
+  line-height: 24px;
+}
+.info-accomoda--subtitle {
+  font-size: 3.6rem;
+  line-height: 42px;
+  letter-spacing: -1px;
+}
+.info-accomoda--paragraph {
+  font-size: 1.48rem;
+  line-height: 22px;
+}
+.info-accomoda--view {
+  margin: 2em auto 1.8em 0;
+  font-size: 1.48rem;
+  line-height: 18px;
+}
+.box-picture img {
+  box-shadow: 0px 0px 22px -10px rgb(0 0 0 / 60%);
+}
+
+/* Events Month's */
+.events--title {
+  font-size: 2rem;
+  line-height: 24px;
+}
+.events-cards-container {
+  grid-template-columns: repeat(4, minmax(240px, 270px));
+  justify-content: center;
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+.event-card {
+  max-height: 1900px;
+}
+.event-picture {
+  height: 185px;
+}
+.event-picture img {
+  box-shadow: 0px 0px 25px -10px rgb(0 0 0 / 0.7);
+}
+
+/* Footer */
+.footer {
+  padding: 1.8em 0;
+  background-color: var(--white-cultured);
+}
+.footer-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer-left,
+.footer-right {
+  display: flex;
+  align-items: center;
+}
+.footer-left .left-item,
+.footer-right .right-item {
+  font-size: 1.5rem;
+  line-height: 19px;
+}
+.left-item,
+.right-item {
+  margin-top: 0em;
+}
+.left-item:first-child::after,
+.right-item:first-child::after {
+  display: inline-block;
+  content: "";
+  vertical-align: middle;
+  height: 4px;
+  width: 4px;
+  margin-left: 0.8em;
+  margin-right: 1em;
+  border-radius: 50%;
+  background-color: var(--black-reisin);
+}
