@@ -13,7 +13,7 @@ function docReady(fn) {
   }
 }
 
-docReady(bookNow(), slidesImages(), valuesBookNow() /* , submitBoook() */)
+docReady(bookNow(), slidesImages(), valuesBookNow())
 
 function bookNow() {
   const bookOpen = document.getElementById("book-open")
@@ -41,6 +41,7 @@ function slidesImages() {
 
   window.addEventListener("resize", () => {
     width = slideItems[0].clientWidth
+    location.reload()
   })
 
   setInterval(() => {
