@@ -49,7 +49,7 @@
           </span>
           <h3 class="form--title">BOOK NOW</h3>
 
-          <form>
+          <form onsubmit="submitBoook(event)">
             <div class="form-item-box">
               <label class="form-label" for="arrival"> Arrival Date </label>
               <input
@@ -57,6 +57,7 @@
                 type="date"
                 name="arrival"
                 id="arrival"
+                required
               />
             </div>
 
@@ -67,6 +68,7 @@
                 type="date"
                 name="departure"
                 id="departure"
+                required
               />
             </div>
 
@@ -75,7 +77,13 @@
               <div class="guests-count">
                 <div class="count-adult">
                   <label class="form-label" for="adults_guests"></label>
-                  <input class="form-input" type="text" placeholder="1 Adult" />
+                  <input
+                    class="form-input"
+                    type="number"
+                    placeholder="1 Adult"
+                    id="countAdults"
+                    required
+                  />
                   <span class="arrow-down icon">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -96,7 +104,13 @@
                 </div>
                 <div class="count-child">
                   <label class="form-label" for="child_guests"></label>
-                  <input class="form-input" type="text" placeholder="1 Child" />
+                  <input
+                    class="form-input"
+                    type="number"
+                    placeholder="1 Child"
+                    id="countChild"
+                    required
+                  />
                   <span class="arrow-down icon">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -124,7 +138,9 @@
               </p>
             </div>
 
-            <button class="go-boook btn btn-firebrick">LET'S GO</button>
+            <button class="go-boook btn btn-firebrick">
+              LET'S GO
+            </button>
           </form>
 
           <a class="book-group" href="/">
@@ -177,19 +193,39 @@
         <div class="slider-background"></div>
         <div class="slider-images">
           <div class="item-slide-img">
-            <img class="slide-img" src="./assets/slider/slider1.jpg" alt="Slider" />
+            <img
+              class="slide-img"
+              src="./assets/slider/slider1.jpg"
+              alt="Slider"
+            />
           </div>
           <div class="item-slide-img">
-            <img class="slide-img" src="./assets/slider/slider2.jpg" alt="Slider" />
+            <img
+              class="slide-img"
+              src="./assets/slider/slider2.jpg"
+              alt="Slider"
+            />
           </div>
           <div class="item-slide-img">
-            <img class="slide-img" src="./assets/slider/slider3.jpg" alt="Slider" />
+            <img
+              class="slide-img"
+              src="./assets/slider/slider3.jpg"
+              alt="Slider"
+            />
           </div>
           <div class="item-slide-img">
-            <img class="slide-img" src="./assets/slider/slider4.jpg" alt="Slider" />
+            <img
+              class="slide-img"
+              src="./assets/slider/slider4.jpg"
+              alt="Slider"
+            />
           </div>
           <div class="item-slide-img">
-            <img class="slide-img" src="./assets/slider/slider1.jpg" alt="Slider" />
+            <img
+              class="slide-img"
+              src="./assets/slider/slider1.jpg"
+              alt="Slider"
+            />
           </div>
         </div>
       </div>
