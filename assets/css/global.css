@@ -49,6 +49,7 @@
 ::after {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -61,6 +62,8 @@ html {
 .section {
   position: relative;
   width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   min-height: 120px;
   padding: 4em 0;
@@ -77,12 +80,16 @@ html {
 }
 /* Buttom */
 .btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 0.4em 1.2em;
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 4px;
   background-color: transparent;
+  -webkit-transition: all ease-out 0.4s;
+  -o-transition: all ease-out 0.4s;
   transition: all ease-out 0.4s;
 }
 .btn-access {
@@ -121,6 +128,18 @@ input {
 }
 input:focus {
   outline: 2px solid var(--imperial-red);
+}
+input::-webkit-input-placeholder {
+  color: var(--silver-wuick);
+}
+input::-moz-placeholder {
+  color: var(--silver-wuick);
+}
+input:-ms-input-placeholder {
+  color: var(--silver-wuick);
+}
+input::-ms-input-placeholder {
+  color: var(--silver-wuick);
 }
 input::placeholder {
   color: var(--silver-wuick);

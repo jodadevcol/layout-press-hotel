@@ -12,13 +12,18 @@
 }
 /* Accommodations */
 .accommodations-box {
+  -ms-grid-columns: minmax(200px, 260px) 4em 1fr;
   grid-template-columns: minmax(200px, 260px) 1fr;
   gap: 0 4em;
 }
 /* Events Month's */
 .events-cards-container {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 240px 2em 240px;
   grid-template-columns: repeat(2, 240px);
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
   gap: 2em;
   width: 100%;
@@ -26,7 +31,12 @@
 }
 /* Footer */
 .footer-box {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 .footer-left {
@@ -40,7 +50,6 @@
   width: 50%;
   max-width: 50%;
   list-style: none;
-  text-align: center;
 }
 .footer-left .left-item,
 .footer-right .right-item {
