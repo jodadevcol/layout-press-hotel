@@ -1,7 +1,7 @@
 /* Hero */
 .hero {
   position: relative;
-  height: 80vh;
+  height: 96vh;
   padding-top: 5em;
 }
 .hero-bar {
@@ -38,7 +38,33 @@
   overflow: hidden;
   z-index: -1040;
 }
-.hero-slider img {
+.slider-background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgb(13, 13, 13);
+  background: radial-gradient(
+    circle,
+    rgba(13, 13, 13, 0.11248249299719892) 16%,
+    rgba(0, 0, 0, 0.6699054621848739) 80%
+  );
+  z-index: 1040;
+}
+.slider-images {
+  display: flex;
+  align-items: center;
+  width: 500%;
+  transition: transform ease-out 0.4s;
+}
+.item-slide-img {
+  width: 100vw;
+  height: 100vh;
+  min-height: 550px;
+  filter: contrast(1.18) brightness(1.2);
+}
+.slide-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
