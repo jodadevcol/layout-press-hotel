@@ -1,0 +1,58 @@
+/* Hero */
+.hero {
+  padding-top: 5.6em;
+}
+.bar-logo > svg {
+  width: 115px;
+  height: 115px;
+}
+/* Histor making */
+.making-paragraph {
+  max-width: 540px;
+}
+/* Accommodations */
+.accommodations-box {
+  grid-template-columns: minmax(200px, 260px) 1fr;
+  gap: 0 4em;
+}
+/* Events Month's */
+.events-cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 240px);
+  justify-content: space-evenly;
+  gap: 2em;
+  width: 100%;
+  margin-top: 3.6em;
+}
+/* Footer */
+.footer-box {
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer-left {
+  text-align: left;
+}
+.footer-right {
+  text-align: right;
+}
+.footer-left,
+.footer-right {
+  width: 50%;
+  max-width: 50%;
+  list-style: none;
+  text-align: center;
+}
+.footer-left .left-item,
+.footer-right .right-item {
+  color: var(--black-reisin);
+  font-size: 1.4rem;
+  line-height: 18px;
+}
+.left-item,
+.right-item {
+  margin-top: 0.8em;
+}
+.left-item:first-child,
+.right-item:first-child {
+  margin-top: 0;
+}
