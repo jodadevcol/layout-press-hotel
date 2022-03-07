@@ -13,7 +13,13 @@ function docReady(fn) {
   }
 }
 
-docReady(bookNow(), slidesImages(), valuesBookNow())
+docReady(
+  bookNow(),
+  slidesImages(),
+  valuesBookNow(),
+  quantityButtons(),
+  deployNumberGuest(),
+)
 
 function bookNow() {
   const bookOpen = document.getElementById("book-open")
@@ -41,7 +47,7 @@ function slidesImages() {
 
   window.addEventListener("resize", () => {
     width = slideItems[0].clientWidth
-    location.reload()
+    /* location.reload() */
   })
 
   setInterval(() => {
@@ -92,4 +98,56 @@ function submitBoook(e) {
 
   alert("Data of Book Now in _console.log_")
   console.log(objectBookNow)
+}
+function quantityButtons() {
+  let quantityBox = document.querySelectorAll(".quantity")
+
+  quantityBox.forEach((quantity) => {
+    let input = quantity.children[0]
+    let inputText = quantity.offsetParent.children[1]
+
+    let btnUp = quantity.children[1].children[1]
+    let btnDown = quantity.children[1].children[0]
+    let min = parseInt(input.min)
+    let max = parseInt(input.max)
+
+    btnUp.addEventListener("click", () => {
+      let oldValue = parseInt(input.value)
+      let newVal
+
+      Number.isNaN(oldValue) ? (oldValue = 0) : (oldValue = oldValue)
+
+      oldValue >= max ? (newVal = oldValue) : (newVal = oldValue + 1)
+
+      input.value = newVal;
+      inputText.id.toLowerCase().includes("adult")
+        ? (inputText.value = `${newVal} Adults`)
+        : (inputText.value = `${newVal} Childs`)
+    })
+
+    btnDown.addEventListener("click", () => {
+      let oldValue = parseInt(input.value)
+      let newVal
+
+      Number.isNaN(oldValue) ? (oldValue = 0) : (oldValue = oldValue)
+
+      oldValue <= min ? (newVal = oldValue) : (newVal = oldValue - 1)
+
+      input.value = newVal;
+      inputText.id.toLowerCase().includes("adult")
+        ? (inputText.value = `${newVal} Adults`)
+        : (inputText.value = `${newVal} Childs`)
+    })
+  })
+}
+function deployNumberGuest() {
+  const numberGuest = document.querySelectorAll(".number_guest")
+
+  numberGuest.forEach((guestItem) => {
+    const nextElement = guestItem.nextElementSibling
+
+    guestItem.addEventListener("click", () => {
+      nextElement.classList.toggle("show")
+    })
+  })
 }

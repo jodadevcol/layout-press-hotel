@@ -79,12 +79,13 @@
                   <label class="form-label" for="adults_guests"></label>
                   <input
                     class="form-input"
-                    type="number"
-                    placeholder="1 Adult"
-                    id="countAdults"
+                    type="text"
+                    id="textAdult"
+                    placeholder="0 Adult"
+                    readonly
                     required
                   />
-                  <span class="arrow-down icon">
+                  <span class="arrow-down icon number_guest">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -101,17 +102,36 @@
                       />
                     </svg>
                   </span>
+                  <div class="quantity">
+                    <input
+                      class="form-input input-guest"
+                      type="number"
+                      id="countAdults"
+                      value="0"
+                      min="0"
+                      max="12"
+                    />
+                    <div class="quantity-nav">
+                      <div class="quantity-button quantity-up">
+                        <span class="up-arrow-left icon"></span>
+                      </div>
+                      <div class="quantity-button quantity-down">
+                        <span class="down-arrow-right icon"></span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="count-child">
                   <label class="form-label" for="child_guests"></label>
                   <input
                     class="form-input"
-                    type="number"
-                    placeholder="1 Child"
-                    id="countChild"
+                    type="text"
+                    id="textChilds"
+                    placeholder="0 Childs"
+                    readonly
                     required
                   />
-                  <span class="arrow-down icon">
+                  <span class="arrow-down icon number_guest">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -128,6 +148,41 @@
                       />
                     </svg>
                   </span>
+                  <div class="quantity">
+                    <input
+                      class="form-input input-guest"
+                      type="number"
+                      id="countChild"
+                      value="0"
+                      min="0"
+                      max="12"
+                    />
+                    <div class="quantity-nav">
+                      <div class="quantity-button quantity-up">
+                        <span class="up-arrow-left icon"></span>
+                      </div>
+                      <div class="quantity-button quantity-down">
+                        <span class="down-arrow-right icon"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <span class="arrow-down icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      width="12"
+                      height="7"
+                      viewBox="0 0 12 7"
+                    >
+                      <image
+                        id="Vector_Smart_Object_copy_9"
+                        data-name="Vector Smart Object copy 9"
+                        width="12"
+                        height="7"
+                        xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAHCAYAAAA8sqwkAAAAcElEQVQYlX3OQQmAQBBG4ScYwAbePFthk5jBJEZYGxjBCkYQDKAR5JdZGJfVuSzDfA+2OtruBEZg5n+irrXhaPQr0r0HgoKESlEDLPYG4FLg0eR2odX2B6cvpRHaDAkPOc4DjQIBRXuOS4GPFLwwwA3TPxjgNhDc4gAAAABJRU5ErkJggg=="
+                      />
+                    </svg>
+                  </span> -->
                 </div>
               </div>
             </div>
