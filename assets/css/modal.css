@@ -20,21 +20,25 @@
   transition: all ease-out .4s;
   transform: translateX(0);
   z-index: 1040;
+  pointer-events: none;
 }
 .book-now-container.show {
-  animation: slide-in-left-alt .4s cubic-bezier(.25,.46,.45,.94) .15s both;
   background-color: rgba(138, 140, 138, 0.68);
+  pointer-events: auto;
 }
 .book-now-position {
   position: fixed;
-  top: 60px;
-  right: -310px;
-  margin-right: 15px;
+  top: 20px;
+  right: 0;
   transition: all ease-out .5s;
+  transform: translateX(100%);
   z-index: 2040;
 }
 .book-now-position.show {
-  right: 0;
+  animation: slide-in-left-alt .4s cubic-bezier(.25,.46,.45,.94) .15s both;
+}
+.book-now-position.close {
+  animation: slide-out-right-alt .5s cubic-bezier(.55,.055,.675,.19) both;
 }
 .book-form {
   position: absolute;
@@ -62,8 +66,8 @@
   position: absolute;
   top: 6%;
   left: 6%;
-  width: 10px;
-  height: 10px;
+  width: 14px;
+  height: 14px;
 }
 .close-form svg {
   width: 100%;
@@ -159,8 +163,8 @@
 /* KeyFrames */
 @keyframes slide-in-left-alt{
   0% {
-    -webkit-transform: translateX(120%);
-    transform: translateX(120%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
     opacity: 1;
   }
   100% {
@@ -176,8 +180,8 @@
     opacity: 1;
   }
   100% {
-    -webkit-transform: translateX(120%);
-    transform: translateX(120%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
     opacity: 1;
   }
 }
